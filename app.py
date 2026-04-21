@@ -29,13 +29,13 @@ app.config['SESSION_COOKIE_HTTPONLY'] = True
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
 
 # ============== بيانات المسؤول ==============
-ADMIN_USERNAME = "8091512031"
-ADMIN_PASSWORD_RAW = "8091512031"
+ADMIN_USERNAME = "24xRaven"
+ADMIN_PASSWORD_RAW = "24xRaven"
 
 # ============== إعدادات البوت والإشعارات ==============
-BOT_TOKEN = "8721873030:AAG21uK3LxQjNylY-mLUIiInzwngLAdArjI"
-ADMIN_TELEGRAM_ID = 8091512031
-ADMIN_TELEGRAM_USERNAME = "@ELZO_z"
+BOT_TOKEN = "8240876952:AAEgAAxTRFSXpsRW5VJwb-h9yJVZPn_3juk"
+ADMIN_TELEGRAM_ID = 7947500104
+ADMIN_TELEGRAM_USERNAME = "@P_X_24"
 
 def notify_admin(message: str):
     """إرسال إشعار للأدمن على تليجرام"""
