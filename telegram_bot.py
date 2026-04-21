@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-𝙼𝙴𝚁𝙾 𝙷𝙾𝚂𝚃 - بوت التحكم الكامل
-طُوِّر بواسطة: ᗴᒪᗰOᗪᗰᗴᑎ | @I_tt_6
+✘ 𝙍𝘼𝙑𝙀𝙉 - بوت التحكم الكامل
+مطُوِّر بواسطة: ✘ 𝙍𝘼𝙑𝙀𝙉 | @P_X_24
 """
 
 import os
@@ -13,14 +13,15 @@ from telegram.ext import (
 )
 
 # ========== إعدادات البوت ==========
-BOT_TOKEN = "8107118673:AAG6xUifqFD5qtCWZMy_D9qEmC8HOCx4DBo"
-API_BASE_URL = os.environ.get("API_BASE_URL", "https://mero-host.onrender.com")
+import os
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+API_BASE_URL = os.environ.get("API_BASE_URL")
 
 # إيدي الأدمن على تليجرام
-ADMIN_TELEGRAM_IDS = [7970883512]
+ADMIN_TELEGRAM_IDS = [7947500104]
 
 # معلومات المطور
-DEVELOPER_INFO = "🛠 طُوِّر بواسطة: *ᗴᒪᗰOᗪᗰᗴᑎ*\n📬 تواصل: @I_tt_6"
+DEVELOPER_INFO = "🛠 مطُوِّر بواسطة: *✘ 𝙍𝘼𝙑𝙀𝙉*\n📬 تواصل: @P_X_24"
 
 # ========== حالات المحادثة ==========
 (
@@ -89,11 +90,11 @@ async def show_main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE, edi
             InlineKeyboardButton(bell, callback_data="admin_notifications"),
         ])
 
-    keyboard.append([InlineKeyboardButton("💬 تواصل مع المطور @I_tt_6", url="https://t.me/I_tt_6")])
+    keyboard.append([InlineKeyboardButton("💬 تواصل مع المطور @P_X_24", url="https://t.me/I_tt_6")])
 
     text = (
         "━━━━━━━━━━━━━━━━━━━━\n"
-        "      𝙼𝙴𝚁𝙾 𝙷𝙾𝚂𝚃 🚀\n"
+        "      ✘ 𝙍𝘼𝙑𝙀𝙉 🚀\n"
         "━━━━━━━━━━━━━━━━━━━━\n"
     )
     if username:
@@ -208,7 +209,7 @@ async def show_admin_panel(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     text = (
         "━━━━━━━━━━━━━━━━━━━━\n"
-        "  👑 لوحة إدارة 𝙼𝙴𝚁𝙾 𝙷𝙾𝚂𝚃\n"
+        "  👑 لوحة إدارة ✘ 𝙍𝘼𝙑𝙀𝙉\n"
         "━━━━━━━━━━━━━━━━━━━━\n"
         f"👥 المستخدمين: *{len(users)}*\n"
         f"🔔 طلبات معلقة: *{pending_count}*\n"
@@ -297,14 +298,14 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     keyboard = [
         [InlineKeyboardButton("🔑 إدخال API Key", callback_data="enter_api")],
-        [InlineKeyboardButton("💬 تواصل مع المطور @I_tt_6", url="https://t.me/I_tt_6")],
+        [InlineKeyboardButton("💬 تواصل مع المطور @P_X_24", url="https://t.me/Raven_xx24")],
     ]
     await update.message.reply_text(
         "━━━━━━━━━━━━━━━━━━━━\n"
-        "      𝙼𝙴𝚁𝙾 𝙷𝙾𝚂𝚃 🚀\n"
+        "      ✘ 𝙍𝘼𝙑𝙀𝙉 🚀\n"
         "━━━━━━━━━━━━━━━━━━━━\n"
         "للاشتراك والحصول على حساب:\n"
-        "📬 تواصل مع المطور: @I_tt_6\n\n"
+        "📬 تواصل مع المطور: @P_X_24\n\n"
         f"{DEVELOPER_INFO}",
         parse_mode="Markdown",
         reply_markup=InlineKeyboardMarkup(keyboard),
@@ -316,11 +317,11 @@ async def handle_api_key(update: Update, context: ContextTypes.DEFAULT_TYPE):
     api_key = update.message.text.strip()
     result = api_request("/api/bot/verify", method="POST", data={"api_key": api_key})
     if not result or not result.get("success"):
-        keyboard = [[InlineKeyboardButton("💬 تواصل مع المطور", url="https://t.me/I_tt_6")]]
+        keyboard = [[InlineKeyboardButton("💬 تواصل مع المطور", url="https://t.me/P_X_24")]]
         await update.message.reply_text(
             "❌ *مفتاح API غير صالح!*\n\n"
             "تحقق من الكود وحاول مرة أخرى\n"
-            "أو تواصل مع المطور: @I_tt_6",
+            "أو تواصل مع المطور: @P_X_24",
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(keyboard),
         )
@@ -603,7 +604,7 @@ def main():
     )
 
     application.add_handler(conv)
-    print("🚀 𝙼𝙴𝚁𝙾 𝙷𝙾𝚂𝚃 Bot يعمل...")
+    print("🚀 ✘ 𝙍𝘼𝙑𝙀𝙉 Bot يعمل...")
     application.run_polling(drop_pending_updates=True)
 
 
