@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-𝙼𝙴𝚁𝙾 𝙷𝙾𝚂𝚃 - مشغّل بوت تليجرام
-طُوِّر بواسطة: @I_tt_6
+✘ 𝙍𝘼𝙑𝙀𝙉 - مشغّل بوت تليجرام
+مطُوِّر بواسطة: @P_X_24
 """
 
 import sys
@@ -17,35 +17,35 @@ logger = logging.getLogger(__name__)
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(
-        "👋 مرحباً! أنا بوت يعمل على 𝙼𝙴𝚁𝙾 𝙷𝙾𝚂𝚃\n\n"
+        "👋 مرحباً! أنا بوت يعمل على ✘ 𝙍𝘼𝙑𝙀𝙉\n\n"
         "الأوامر المتاحة:\n"
         "/start - عرض هذه الرسالة\n"
         "/help - الحصول على المساعدة\n"
         "/info - معلومات البوت\n\n"
-        "🛠 طُوِّر بواسطة: @I_tt_6"
+        "🛠 مطُوِّر بواسطة: @P_X_24"
     )
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(
         "📚 المساعدة:\n\n"
-        "هذا البوت يعمل بشكل مستمر على خادم 𝙼𝙴𝚁𝙾 𝙷𝙾𝚂𝚃\n"
-        "للاشتراك أو الاستفسار: @I_tt_6"
+        "هذا البوت يعمل بشكل مستمر على خادم ✘ 𝙍𝘼𝙑𝙀𝙉\n"
+        "للاشتراك أو الاستفسار: @P_X_24"
     )
 
 async def info_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(
         "ℹ️ معلومات البوت:\n\n"
-        "🤖 الخدمة: 𝙼𝙴𝚁𝙾 𝙷𝙾𝚂𝚃\n"
+        "🤖 الخدمة: ✘ 𝙍𝘼𝙑𝙀𝙉\n"
         "✅ الحالة: نشط ومستمر\n"
-        "🛠 المطور: @I_tt_6"
+        "🛠 المطور: @P_X_24"
     )
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_message = update.message.text
     await update.message.reply_text(
         f"📨 تم استقبال رسالتك:\n\n{user_message}\n\n"
-        "شكراً لاستخدامك 𝙼𝙴𝚁𝙾 𝙷𝙾𝚂𝚃!\n"
-        "🛠 @I_tt_6"
+        "شكراً لاستخدامك ✘ 𝙍𝘼𝙑𝙀𝙉!\n"
+        "🛠 @P_X_24"
     )
 
 async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -54,7 +54,7 @@ async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE) -> N
 def run_bot(token: str, bot_name: str) -> None:
     try:
         print("\n" + "═"*60)
-        print(f" 🤖 𝙼𝙴𝚁𝙾 𝙷𝙾𝚂𝚃 - جاري تشغيل البوت: {bot_name}")
+        print(f" 🤖 ✘ 𝙍𝘼𝙑𝙀𝙉 - جاري تشغيل البوت: {bot_name}")
         print(" 🚀 يتم الآن الاتصال بخوادم تليجرام...")
         print("═"*60 + "\n")
         application = Application.builder().token(token).build()
@@ -63,7 +63,7 @@ def run_bot(token: str, bot_name: str) -> None:
         application.add_handler(CommandHandler("info", info_command))
         application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
         application.add_error_handler(error_handler)
-        print(f" ✅ البوت {bot_name} جاهز الآن على 𝙼𝙴𝚁𝙾 𝙷𝙾𝚂𝚃!")
+        print(f" ✅ البوت {bot_name} جاهز الآن على ✘ 𝙍𝘼𝙑𝙀𝙉!")
         print(" 📡 الحالة: نشط وينتظر الرسائل...\n")
         application.run_polling()
     except Exception as e:
