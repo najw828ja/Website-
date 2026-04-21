@@ -35,6 +35,8 @@ ADMIN_PASSWORD_RAW = "24xRaven"
 # ============== إعدادات البوت والإشعارات ==============
 import os
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
+if not BOT_TOKEN:
+    raise ValueError("BOT_TOKEN not set")
 ADMIN_TELEGRAM_ID = 7947500104
 ADMIN_TELEGRAM_USERNAME = "@P_X_24"
 
