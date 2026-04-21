@@ -33,7 +33,8 @@ ADMIN_USERNAME = "24xRaven"
 ADMIN_PASSWORD_RAW = "24xRaven"
 
 # ============== إعدادات البوت والإشعارات ==============
-BOT_TOKEN = "8240876952:AAEgAAxTRFSXpsRW5VJwb-h9yJVZPn_3juk"
+import os
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
 ADMIN_TELEGRAM_ID = 7947500104
 ADMIN_TELEGRAM_USERNAME = "@P_X_24"
 
